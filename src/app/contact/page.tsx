@@ -6,7 +6,7 @@ export default function Contact() {
       <div className="mx-7 py-12 max-w-[600px] lg:m-0 lg:pr-32 lg:box-border">
         <div>
           <div className="uppercase tracking-widest text-sm mb-12 xl:mb-20 text-secondary">
-            Let's get it touch
+            Let&lsquo;s get it touch
           </div>
           <h1 className="text-primary font-serif mb-12 text-5xl lg:text-8xl tracking-tight">
             Lorem!

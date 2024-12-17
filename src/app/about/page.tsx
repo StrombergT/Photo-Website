@@ -14,7 +14,7 @@ export default function About() {
               John Doe
             </h1>
             <div className="text-xl mb-12 leading-loose text-secondary">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
               ab officia quam sequi, necessitatibus aut delectus error, eveniet
               qui, corporis mollitia veniam exercitationem quod recusandae odio
               at. Atque, at ut!
@@ -28,8 +28,8 @@ export default function About() {
           </div>
           <blockquote className="mt-10 text-primary ">
             <p className="text-2xl font-light">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
-              amet nulla auctor, vestibulum magna sed, convallis ex."
+              &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              sit amet nulla auctor, vestibulum magna sed, convallis ex.&quot;
             </p>
             <cite className="text-lg font-bold">- John Doe, CEO @ Company</cite>
           </blockquote>
