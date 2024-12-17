@@ -5,13 +5,13 @@ export default function Contact() {
     <main className="lg:fixed lg:inset-0 lg:flex lg:items-center lg:justify-center">
       <div className="mx-7 py-12 max-w-[600px] lg:m-0 lg:pr-32 lg:box-border">
         <div>
-          <div className="uppercase tracking-widest text-sm mb-12 xl:mb-20 text-black">
+          <div className="uppercase tracking-widest text-sm mb-12 xl:mb-20 text-secondary">
             Let's get it touch
           </div>
-          <h1 className="text-black font-serif mb-12 text-5xl lg:text-8xl tracking-tight">
+          <h1 className="text-primary font-serif mb-12 text-5xl lg:text-8xl tracking-tight">
             Lorem!
           </h1>
-          <div className="prose max-w-none text-black">
+          <div className="prose max-w-none text-secondary">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
             commodi labore nihil sit possimus ipsum similique, dicta ad sed
             vitae dolores perspiciatis, suscipit corporis excepturi debitis

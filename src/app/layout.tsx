@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "../components/layout/Navbar/Navbar";
-import Parallax from "../components/Parallax";
 import { NavigationMenu } from "../components/NavigationMenu";
 
 const geistSans = localFont({
@@ -29,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans overflow-x-hidden text-gray-200 `}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans overflow-x-hidden bg-[#0d1117]`}
       >
         <NavigationMenu />
         {children}

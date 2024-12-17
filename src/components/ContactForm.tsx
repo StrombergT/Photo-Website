@@ -37,7 +37,7 @@ export default function ContactForm() {
     <div className="lg:w-[25vw] lg:min-w-[450px] lg:max-w-[550px]">
       <form onSubmit={handleSubmit(onSubmit)} className="blcok mb-1 text-sm">
         <div className="flex flex-col gap-3">
-          <label htmlFor="name" className="text-xl text-black">
+          <label htmlFor="name" className="text-xl text-primary">
             Name
           </label>
           <input
@@ -50,7 +50,7 @@ export default function ContactForm() {
           )}
         </div>
         <div className="flex flex-col gap-3">
-          <label htmlFor="email" className="text-xl text-black">
+          <label htmlFor="email" className="text-xl text-primary">
             Email
           </label>
           <input
@@ -63,7 +63,7 @@ export default function ContactForm() {
           )}
         </div>
         <div className="flex flex-col gap-3">
-          <label htmlFor="phone" className="text-xl text-black">
+          <label htmlFor="phone" className="text-xl text-primary">
             Phone number
           </label>
           <input
@@ -76,7 +76,7 @@ export default function ContactForm() {
           )}
         </div>
         <div className="flex flex-col gap-3">
-          <label htmlFor="message" className="text-xl text-black">
+          <label htmlFor="message" className="text-xl text-primary">
             Message
           </label>
           <textarea
@@ -89,7 +89,7 @@ export default function ContactForm() {
           )}
           <button
             type="submit"
-            className="button bg-pink-600 hover:bg-pink-500 text-2xl text-black rounded-md px-6 py-4 mt-5"
+            className="button bg-pink-600 hover:bg-pink-500 text-2xl text-primary rounded-md px-6 py-4 mt-5"
           >
             Submit
           </button>

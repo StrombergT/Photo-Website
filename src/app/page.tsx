@@ -16,13 +16,13 @@ export default function Home() {
         <Tile>
           <div className="mx-7 py-12 xl:m-0 xl:w-[60vw] xl:max-w-[900px] xl:flex xl:items-center xl:justify-between xl:p-32">
             <div>
-              <div className="uppercase tracking-widest text-sm mb-12 xl:mb-20 text-black">
+              <div className="uppercase tracking-widest text-sm mb-12 xl:mb-20 text-primary">
                 John Doe Photography
               </div>
-              <h1 className="text-black font-serif mb-12 text-5xl xl:text-8xl tracking-tight">
+              <h1 className="text-primary font-serif mb-12 text-5xl xl:text-8xl tracking-tight">
                 Fångar ögonblicken som varar för evigt.
               </h1>
-              <div className="leading-loose prose max-w-none text-black">
+              <div className="leading-loose prose max-w-none text-secondary">
                 Fotografering handlar inte bara om bilder – det är att fånga din
                 berättelse och förvandla den till något unikt och minnesvärt.
                 Låt mig hjälpa dig att berätta din historia genom min lins.
