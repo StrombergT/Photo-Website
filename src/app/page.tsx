@@ -16,7 +16,7 @@ export default function Home() {
         <Tile>
           <div className="mx-7 py-12 xl:m-0 xl:w-[60vw] xl:max-w-[900px] xl:flex xl:items-center xl:justify-between xl:p-32">
             <div>
-              <div className="uppercase tracking-widest text-sm mb-12 xl:mb-20 text-primary">
+              <div className="uppercase tracking-widest text-sm mb-12 xl:mb-20 sm:mt-24 text-primary">
                 John Doe Photography
               </div>
               <h1 className="text-primary font-serif mb-12 text-5xl xl:text-8xl tracking-tight">
