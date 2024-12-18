@@ -14,6 +14,9 @@ export default {
         primary: "#f1f1f2",
         secondary: "#8b949e",
       },
+      margin: {
+        xs: "4rem",
+      },
     },
   },
   plugins: [],

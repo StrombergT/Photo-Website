@@ -22,9 +22,9 @@ export function Photoshoot({ total, imageSrc }: PhotoshootProps) {
             objectPosition="center"
             className="h-full object-cover w-full"
           />
-          <div className="hidden xl:flex absolute z-10 bottom-[250px] left-[-40px] -rotate-90 origin-top-left items-center text-black">
-            <div className="before:content-[counter(photoshoot-counter)]" />
-            <div className="h-[2px] w-[100px] mx-4 bg-black" />
+          <div className="hidden xl:flex absolute z-10 bottom-[250px] left-[-40px] -rotate-90 origin-top-left items-center text-secondary">
+            <div className="before:content-[counter(photoshoot-counter)] text-secondary" />
+            <div className="h-[2px] w-[100px] mx-4 bg-secondary" />
             <div>{total}</div>
           </div>
         </div>

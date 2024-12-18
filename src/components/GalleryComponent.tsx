@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 export default function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [visibleImages, setVisibleImages] = useState(4);
 
@@ -19,14 +19,28 @@ export default function Gallery() {
     "/img/profile.jpg",
   ];
 
-  const openModal = (imageSrc: string) => {
-    setSelectedImage(imageSrc);
+  const openModal = (index: number) => {
+    setSelectedIndex(index);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setSelectedImage(null);
+    setSelectedIndex(null);
+  };
+
+  const showNextImage = () => {
+    setSelectedIndex((prevIndex) => {
+      if (prevIndex === null) return 0;
+      return (prevIndex + 1) % images.length;
+    });
+  };
+
+  const showPreviousImage = () => {
+    setSelectedIndex((prevIndex) => {
+      if (prevIndex === null) return 0;
+      return (prevIndex - 1 + images.length) % images.length;
+    });
   };
 
   const loadMoreImages = () => {
@@ -40,7 +54,7 @@ export default function Gallery() {
           <div
             key={i}
             className="overflow-hidden rounded-lg shadow-lg cursor-pointer"
-            onClick={() => openModal(imageSrc)}
+            onClick={() => openModal(i)}
           >
             <Image
               src={imageSrc}
@@ -52,34 +66,44 @@ export default function Gallery() {
           </div>
         ))}
       </div>
-
       {visibleImages < images.length && (
         <div className="flex justify-center mt-4">
           <button
             onClick={loadMoreImages}
-            className="px-6 py-2 bg-cyan-700 text-white rounded-full hover:bg-cyan-500 transition-all mb-10"
+            className="px-6 py-2 bg-cyan-700 text-primary rounded-full hover:bg-cyan-500 transition-all mb-10"
           >
             Ladda mer
           </button>
         </div>
       )}
-
-      {isModalOpen && selectedImage !== null && (
+      {isModalOpen && selectedIndex !== null && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="relative max-w-3xl max-h-full p-4">
+          <div className="relative max-w-3xl max-h-full p-4 flex items-center">
             <button
-              onClick={closeModal}
-              className="absolute top-8 right-8 text-white text-xl bg-black/10 p-2 rounded-full hover:bg-black"
+              onClick={showPreviousImage}
+              className="absolute left-4 text-white text-3xl bg-black/50 rounded-full p-2 hover:bg-black/75"
             >
-              &times;
+              &#8592;
             </button>
             <Image
-              src={selectedImage}
-              alt="Selected Image"
+              src={images[selectedIndex]}
+              alt={`Selected Image ${selectedIndex + 1}`}
               width={800}
               height={800}
               className="w-full h-[1000px] object-contain rounded-md"
             />
+            <button
+              onClick={showNextImage}
+              className="absolute right-4 text-white text-3xl bg-black/50 rounded-full p-2 hover:bg-black/75"
+            >
+              &#8594;
+            </button>
+            <button
+              onClick={closeModal}
+              className="absolute top-8 right-8 text-primary text-xl bg-black/50 p-2 rounded-full hover:bg-black"
+            >
+              &times;
+            </button>
           </div>
         </div>
       )}
