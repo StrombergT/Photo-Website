@@ -1,3 +1,4 @@
+import FaqComponent from "@/src/components/FaqComponent";
 import Image from "next/image";
 
 export default function About() {
@@ -45,6 +46,7 @@ export default function About() {
             corporis mollitia veniam exercitationem quod recusandae odio at.
             Atque, at ut!
           </div>
+          <FaqComponent />
           <div className="hidden xl:block fixed inset-0 left-auto w-[45vw] 2xl:w-[50vw]">
             <Image
               src="/img/profile.jpg"
