@@ -38,8 +38,12 @@ export function HorizontalScroller({
 
   return (
     <div
-      className="xl:fixed xl:inset-0 xl:overflow-x-auto xl:overflow-y-hidden xl:fled xl:items-stretch"
+      className="xl:fixed xl:inset-0 xl:overflow-x-auto xl:overflow-y-hidden xl:flex xl:items-stretch"
       ref={scrollRef}
+      style={{
+        scrollbarWidth: "thin",
+        scrollbarColor: "#333 transparent",
+      }}
     >
       {children}
     </div>
